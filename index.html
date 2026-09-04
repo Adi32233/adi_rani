@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>לגומא שלי 🤍</title>
+  <meta name="theme-color" content="#f6f0e8" />
+  <style>
+    :root{
+      --bg:#f6f0e8;
+      --paper:#fffaf4;
+      --text:#2a241f;
+      --muted:#7a6f64;
+      --line:#dfd2c5;
+      --accent:#8f6d5b;
+      --shadow:0 14px 45px rgba(68,49,34,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#f8f3ed 0%,#f5ede5 100%);
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      line-height:1.9;
+    }
+    .wrap{width:min(900px,92vw);margin:0 auto}
+    .hero{
+      min-height:100svh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:40px 20px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.9), transparent 28%),
+        radial-gradient(circle at 80% 70%, rgba(231,214,197,.55), transparent 35%);
+      pointer-events:none;
+    }
+    .hero-card{
+      position:relative;
+      background:rgba(255,250,244,.82);
+      backdrop-filter:blur(8px);
+      border:1px solid rgba(143,109,91,.18);
+      border-radius:28px;
+      padding:42px 26px;
+      box-shadow:var(--shadow);
+      max-width:620px;
+      width:100%;
+    }
+    h1,h2,h3{
+      font-family:Georgia,"Times New Roman",serif;
+      font-weight:500;
+      margin:0 0 18px;
+    }
+    h1{font-size:clamp(42px,9vw,76px)}
+    h2{font-size:clamp(30px,7vw,50px)}
+    h3{font-size:clamp(22px,5vw,34px)}
+    .subtitle{font-size:18px;color:var(--muted);margin:0 auto 28px;max-width:480px}
+    .start{
+      display:inline-block;
+      border:1px solid var(--accent);
+      color:var(--text);
+      text-decoration:none;
+      padding:12px 22px;
+      border-radius:999px;
+      background:#fffaf4;
+      font-weight:600;
+    }
+    .section{padding:70px 0}
+    .chapter{
+      background:var(--paper);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(143,109,91,.13);
+      margin-bottom:34px;
+    }
+    .chapter img,.memory img{width:100%;display:block;object-fit:cover}
+    .chapter img{max-height:700px}
+    .chapter .content{padding:28px 24px 34px}
+    .chapter p{margin:0 0 16px;font-size:18px}
+    .quote{
+      margin:24px 0;
+      padding:18px 20px;
+      border-right:3px solid var(--accent);
+      background:#f8f1ea;
+      border-radius:14px;
+      font-size:21px;
+      font-family:Georgia,"Times New Roman",serif;
+    }
+    .date{
+      text-align:center;
+      font-size:30px;
+      margin:26px 0;
+      font-family:Georgia,"Times New Roman",serif;
+    }
+    .divider{
+      text-align:center;color:var(--muted);font-size:24px;margin:8px 0 38px
+    }
+    .gallery-title{text-align:center;margin-bottom:30px}
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+    .memory{
+      background:var(--paper);
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid rgba(143,109,91,.13);
+      box-shadow:0 8px 28px rgba(68,49,34,.08);
+    }
+    .memory img{aspect-ratio:4/5}
+    .memory p{padding:16px 16px 18px;margin:0;font-size:16px;line-height:1.55}
+    .memory.wide{grid-column:1/-1}
+    .memory.wide img{aspect-ratio:16/10;max-height:680px}
+    .final{
+      background:var(--paper);
+      border-radius:28px;
+      padding:34px 24px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(143,109,91,.13);
+      margin:34px 0 80px;
+    }
+    .final p{font-size:19px;margin:0 0 18px}
+    .signature{
+      text-align:center;
+      margin-top:32px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:26px;
+    }
+    .fade{opacity:0;transform:translateY(16px);transition:.8s ease}
+    .fade.show{opacity:1;transform:none}
+    @media(max-width:640px){
+      .gallery{grid-template-columns:1fr}
+      .memory.wide{grid-column:auto}
+      .memory.wide img{aspect-ratio:4/5}
+      .section{padding:50px 0}
+      .chapter .content,.final{padding:24px 19px 28px}
+      .chapter p,.final p{font-size:17px}
+      .quote{font-size:19px}
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-card fade">
+      <h1>לגומא שלי 🤍</h1>
+      <p class="subtitle">רגע לפני שאנחנו נפגשים בחופה, הכנתי לך משהו קטן. רק אתה ואני, מההתחלה ועד היום.</p>
+      <a class="start" href="#story">תלחץ כאן כדי להתחיל</a>
+    </div>
+  </section>
+
+  <main id="story" class="wrap">
+
+    <section class="section">
+      <article class="chapter fade">
+        <img src="01_brazil_meeting.jpeg" alt="">
+        <div class="content">
+          <h2>30.4.22 — היום שהכרנו 🇧🇷</h2>
+          <p>פתאום אתה וטוהר נכנסתם למטבח אחרי שאני ויובי בישלנו איזה 4 שעות וביקשתם להצטרף לארוחה.</p>
+          <p>אני בכלל חשבתי שאתה דתי עם הכיפה של בוב מארלי על הראש. יש לי ממש תמונה שלך בראש שאתה במטבח נשען על הקיר ומדבר איתי בזמן שאנחנו מבשלות.</p>
+          <p>ואז שלחנו אתכם לקנות קצת דברים לארוחת שישי וחזרתם רטובים לגמרי מהגשם.</p>
+          <p>ואז אחרי הארוחה היינו יחד בחדר בהוסטל וראינו סרטונים של אסי וגורי ולא הפסקנו לצחוק, ואז התחלת לעשות לי מסאז בגב, ישר ידעת איך לקנות אותי 🙃</p>
+          <p>ואז שיצאתם מהחדר עמית ישר אמר לי - הוא רוצה אותך אני אומר לך.</p>
+          <p>באותו היום בכלל היית אמור כבר לעזוב את האי, וזה מטורף איך היקום גרם לך להישאר ועשה סופה באיליה גרנדה באותו היום.</p>
+          <p>יום אחרי זה כבר עזבתם את האי וביקשת את המספר שלי.</p>
+          <p>ומאז לא הבנתי מי זה החופר הזה שכל הזמן רוצה לעשות איתי פייסטיים 🤣</p>
+        </div>
+      </article>
+
+      <article class="chapter fade">
+        <img src="02_morro.jpeg" alt="">
+        <div class="content">
+          <h2>מורו 🤍</h2>
+          <p>ואחרי שלא הפסקת לחפור לי שאני חייבת לך אסאי ביחד, נפגשנו שוב במורו.</p>
+          <p>עם כמה שהייתי מעצבנת אליך שם, אני כבר הרגשתי הכי קרובה אליך בעולם.</p>
+          <p>על היום הראשון שהגעת למורו כבר כל כך דאגת לי. לא הרגשתי טוב בארוחת שישי וישר אמרת שתלווה אותי חזרה לחדר, ונשארת איתי ולא עזבת אותי לרגע ורק דאגת שיהיה לי טוב.</p>
+          <p>אחרי זה הלכנו כבר יחד למסיבה ואני זוכרת שכבר בדרך חזרה הלכנו יד ביד.</p>
+          <p>והיה לנו שם נוהל בוקר ללכת יחד להתאמן בחדר כושר, וזה היה הכי כיף בעולם. כל פעם באת ואספת אותי מהמלון והלכנו יחד.</p>
+          <p>ובמורו הכרנו גם את גומא המקורי - חה חה חביתה 🤣 עם הכריך חביתה הכי טעים בעולם שעד עכשיו לא ניסינו לשחזר (אנחנו חייבים).</p>
+          <p>וצילמתי אותו בסרטון בקטנה, שלא יכלתי להאמין אז כמה הסרטון הזה ישפיע עלינו גם.</p>
+          <p><strong>השמות שלנו - גומא וגיגי. 🤍</strong></p>
+          <p>ואז היינו גם בטיול טרקטורונים שם, ורק ניסית להציל אותי מחיים שלי שלא הפסיק לרדוף אחריי ולנסות לנשק אותי 🤣</p>
+          <p>הרגשתי איתך כבר חיבור שונה, שיש לנו קשר אחר ומיוחד, שהשיחות שלנו שונות ומיוחדות.</p>
+          <p><strong>אתה ישר נהיית החבר הכי טוב שלי.</strong></p>
+          <p>אומנם אולי אתה זוכר את זה אחרת כי הייתי קצת מגעילה (קצת 🤣) אבל מבחינתי הזיכרון שלי משם זה שגיליתי את הבן אדם המדהים שאתה.</p>
+          <p>זה מדהים כמה דאגת לי מההתחלה בצורה שבחיים לא חוויתי. ועוד בקושי הכרת אותי, והייתי קצת מגעילה 🤣 ועדיין כל כך דאגת לי כל הזמן, וזה רק מראה על הבן אדם המדהים שאתה.</p>
+        </div>
+      </article>
+
+      <article class="chapter fade">
+        <img src="03_chapada.jpeg" alt="">
+        <div class="content">
+          <h2>שאפדה 🌿</h2>
+          <p>ואז המשכנו לשאפדה ביחד.</p>
+          <p>אני זוכרת אותנו יושבים יחד בספה למטה ורואים מלבי אקספרס. מבשלים יחד, רבים מי נוהג באוטו, והיה הכי כיף בעולם.</p>
+          <p>ואז נסענו לטייל במפל הענק ונכנסתי איתך מאחוריו והתחיל לי התקף חרדה ופשוט עזרת לי ומשכת אותי משם מהר והרגעת אותי.</p>
+          <p>רק בדיעבד אמרת לי שבאותה התקופה כל כך התעצבנת עליי שאמרת לטוהר לישון איתי בחדר ושאתה תישן קומה ממתחת 🤣</p>
+          <p>ושם, אחרי שהיקום שוב סימן לנו והכרטיסי טיסה למקסיקו היו יקרים בצורה לא הגיונית שאפילו סוכנת הקסמים אמרה שבחיים לא היו מחירים כאלו, ובזכות זה החלטתי להמשיך איתך ועם טוהר לפרו.</p>
+        </div>
+      </article>
+
+      <article class="chapter fade">
+        <img src="04_peru_lima.jpeg" alt="">
+        <div class="content">
+          <h2>פרו 🤍</h2>
+          <p>ואז הגענו יחד לפרו 🤍</p>
+          <p>טוהר די מהר נטש אותנו ככה שנשארנו שנינו. הכרנו לנו חברים חדשים אבל זה עדיין היה אתה ואני.</p>
+          <p>עוד לפני קוסקו שהיינו בלימה הייתה את המסיבה בהוסטל ושנינו שתינו רום וקולה שסימם אותנו בטירוף.</p>
+          <p>ואז היה רגע, שהיינו יחד בצד ליד הקיר ופשוט הסתכלנו אחד לשני בעיניים, והתנשקנו בפעם הראשונה.</p>
+          <p>זה היה הרגע הכי מדהים בעולם שאני בחיים לא אשכח.</p>
+          <p>ואז הלכנו יחד לחדר ושפכת לי את הכוס אלכוהול כדי שלא אשתה יותר והלכנו לישון ביחד, במיטה שלי בהוסטל בפעם הראשונה. וזה הרגיש הכי טבעי ומדהים שיש.</p>
+          <p>יום אחרי זה ישבתי עם הסיני או יפני לא זוכרת מה הוא היה שהסתובב בהוסטל והוא אמר לי:</p>
+          <div class="quote">אני רואה את זה שאתם מאוהבים, אני אומר לך יש לי תחושה שיש פה משהו גדול.</div>
+        </div>
+      </article>
+
+      <article class="chapter fade">
+        <img src="05_peru_treks.jpeg" alt="">
+        <div class="content">
+          <h2>פרו — ההמשך 🤍</h2>
+          <p>ואז התחלנו לצאת לטרקים ולטייל יחד.</p>
+          <p>בטרק הראשון אני כבר עוד שנייה התעלפתי עם המחלת גבהים שלי ואתה כל כך דאגת לי והיית שם לצידי, עצרת את המיניבוס ודאגת שישימו לי חמצן ואז הלכת איתי לבדיקות.</p>
+          <p>ובדרך חזרה אני זוכרת שישבנו יחד במיניבוס והיו מלא כוכבים מהממים בחוץ ופשוט נרדמתי עליך.</p>
+          <p>ואז הגיע האינקה ג׳נגל.</p>
+          <p>היום הראשון בטיול - הראפינג 🤣 היום שכמעט מתנו.</p>
+          <p>אני בחיים בחיים לא אשכח שאני הצלחתי להעלות על הסירה אחרי שהתהפכנו ואז חיפשתי אותך ופתאום אני רואה אותך צף עם החליפת הצלה ומחייך ואז שאלתי אותך - איך אתה ככה מחייך? אני כולי הייתי באטרף וחרדה, ואז אתה אמרת לי:</p>
+          <div class="quote">״כי אני רואה אותך ואת בסדר״.</div>
+          <p>וזה רגע שאני בחיים לא אשכח.</p>
+          <p>אתה כל הזמן דאגת לי, תמכת בי, והיית שם לצידי.</p>
+          <div class="date">29.5.22 🤍</div>
+          <p style="text-align:center"><strong>וזה היום שנהיינו ביחד. היום שלא אשכח בחיים.</strong></p>
+          <p>יום אחרי זה כבר היה לנו מסלול של 10 ק״מ יחד לאגווס קלייאנטס. אני זוכרת שכל המסלול הלכנו יד ביד ודיברנו מלא. ובסוף המסלול זה היה רגע כל כך קסום כי יצאו מלא גחליליות שנהיה חשוך.</p>
+          <p>ואז נסענו לאמזונס, שם כבר ממש היינו זוג לכל דבר. ישנו יחד בבקתה, ופשוט היינו יחד. וזה היה מדהים.</p>
+          <p>אלו ימים שלא אשכח בחיים.</p>
+        </div>
+      </article>
+
+      <article class="chapter fade">
+        <img src="06_mexico.jpeg" alt="">
+        <div class="content">
+          <h2>מקסיקו 🇲🇽🤍</h2>
+          <p>ואז עזבתי למקסיקו.</p>
+          <p>במשך שבועיים דיברנו מלא בפייסטיים והחלטת שאתה טס אליי.</p>
+          <p>ואז באתי לאסוף אותך מהשדה תעופה בפוארטו אסקונדידו, ורצתי אליך וחיבקתי אותך ונישקתי אותך אחרי פתאום שבועיים בנפרד שהתרגלנו להיות כל היום ביחד.</p>
+          <p>והיה הכי מדהים בעולם, טיילנו במקסיקו ובבליז, היינו בקוקו בונגו והשתכרנו ביחד ונהנו.</p>
+          <p>שם גם החלטנו על התאריך שנהינו ביחד, התאריך שלנו.</p>
+          <div class="date">29.5.22 🤍</div>
+          <p>ואז החלטת לטוס איתי בחזרה לארץ.</p>
+        </div>
+      </article>
+
+      <article class="chapter fade">
+        <img src="07_israel_return.jpeg" alt="">
+        <div class="content">
+          <h2>חוזרים הביתה 🇮🇱🤍</h2>
+          <p>ואז נחתנו בארץ, אני אחרי חצי שנה ואתה אחרי ארבעה חודשים.</p>
+          <p>והחלטנו להתחיל יחד פרק חדש בחיים.</p>
+          <p>ולהתחיל להכיר את החיים אחד של השני בארץ, את המשפחות, את החברים.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="gallery-title fade">וכל מה שקרה בדרך… 🤍</h2>
+      <div class="gallery">
+        <div class="memory fade"><img src="08_first_birthday.jpeg"><p>פה זאת היום הולדת הראשונה שחגגתי לך 🤍</p></div>
+        <div class="memory fade"><img src="09_asai_grandparents.jpeg"><p>קצת אסאי עם סבא וסבתא 🤍</p></div>
+        <div class="memory fade"><img src="10_massage.jpeg"><p>פעם ראשונה במסאז בארץ ביום הולדת שלך 🤍</p></div>
+        <div class="memory fade"><img src="11_tiberias.jpeg"><p>שישנו יחד במלון בטבריה אחרי ההלם תרבות שקיבלנו מהמקום שהיינו אמורים לישון בו שכבר שכחתי את השם שלו וטוב שכך 🤣</p></div>
+        <div class="memory fade"><img src="12_pizza.jpeg"><p>מלא פיצות טעימות יחד 🍕🤍</p></div>
+        <div class="memory fade"><img src="13_purim.jpeg"><p>מסיבת פורים ראשונה ביחד 🎭🤍</p></div>
+        <div class="memory fade"><img src="14_gym.jpeg"><p>כמובן שחד״כ חרות שאי אפשר לשכוח אותו 🤣🤍</p></div>
+        <div class="memory fade"><img src="15_shavuot.jpeg"><p>שבועות יחד במושב 🤍🌾</p></div>
+        <div class="memory fade"><img src="16_before_living_together.jpeg"><p>קצת צחוקים שישנו אצלך לפני שגרנו יחד 🤍🤣</p></div>
+        <div class="memory fade"><img src="17_paris.jpeg"><p>פריז. טיול ראשון ביחד אחרי דרום אמריקה. 🇫🇷🤍</p></div>
+        <div class="memory fade"><img src="18_elton.jpeg"><p>הופעה של אלטון ג׳ון שלא הפסקתי לבכות שראיתי אותו 🥹🤍<br>לא נשכח שזה בזכות זאב (הדבר היחיד הטוב שיצא ממנו 🤣)</p></div>
+        <div class="memory fade"><img src="19_ikea.jpeg"><p>באיקאה שהלכנו לקנות יחד דברים למעבר דירה שלנו 🤍🏠</p></div>
+        <div class="memory fade"><img src="20_jeep.jpeg"><p>טיול ג׳יפים 🤍</p></div>
+        <div class="memory fade"><img src="21_greece.jpeg"><p>יוון 🇬🇷🤍</p></div>
+        <div class="memory fade"><img src="22_desert.jpeg"><p>עוד קצת טיולים במדבר 🤍</p></div>
+        <div class="memory fade"><img src="23_wedding_friends.jpeg"><p>החתונה של דורי ויובי 🤍</p></div>
+        <div class="memory fade"><img src="24_proposal.jpeg"><p>ההצעה שלנו שהייתה הכי יפה בעולם 🤍<br>שלא הצלחתי לעמוד על הרגליים מרוב התרגשות 🥹</p></div>
+        <div class="memory fade"><img src="25_post_proposal.jpeg"><p>שגררתי אותך לצילומים אחרי ההצעה שנייה לפני הטיסה לתאילנד 😂🤍</p></div>
+        <div class="memory fade"><img src="26_thailand.jpeg"><p>בתאילנד המושלמת 🤍🌴</p></div>
+        <div class="memory wide fade"><img src="27_save_the_date.jpeg"><p>והצילומי save the date בשביל היום 🥹🤍</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="final fade">
+        <h2>גומא שלי, שבעוד רגע בעלי 🤍</h2>
+        <p>וכמה עברנו מאז, כל כך הרבה גומא שלי.</p>
+        <p>טיסות, מעבר דירה, צ׳וקו שלנו.</p>
+        <p>אתה החבר הכי הכי טוב שלי בעולם. אני לא יכולה לתאר לך כמה אני יודעת שזכיתי. זכיתי בחבר הכי טוב שלי, בזה שיודע תמיד לעודד אותי, גורם לי לקחת הכל בפרופורציות, פותח לי את הראש ואת החשיבה. באמת שזה נשמע קלישאה אבל מילים לא יכולות לתאר להסביר את כל מה שאני מרגישה כלפיך.</p>
+        <p>זה מטורף, היום אנחנו מתחילים פרק חדש בחיים שלנו, ביחד.</p>
+        <p><strong>נהייה ביחד עדי ורני אסייג.</strong></p>
+        <p>אני כל כך מתרגשת ומצפה להמשך החיים שלנו ביחד, ולנצח. שנטייל, שנטרוף את העולם עם מלא המצאות גאוניות ועסקים מטורפים, שנגשים את עצמנו ביחד, שנהנה תמיד מהדרך, שנצחק, ונשמח.</p>
+        <p>שהאהבה שלנו רק תגדל ותצמח, ונביא לנו לוסי קטנה וחמודה שתהיה אחות של צ׳וקי שלנו, ואחרי זה כמה ילדים חמודים.</p>
+        <p>מצפה ומחכה כבר לראות אותך היום במפגש, ולפגוש אותך שוב מתחת לחופה. אני לא קולטת שהרגע הזה הגיע. ואין מאושרת ממני.</p>
+        <p>כמה עברנו ביחד גומא שלי, זה פשוט מטורף להסתכל אחורה ולהבין את זה. אני באמת מרגישה כאילו אני מכירה אותך כל החיים שלי, אני כאילו לא זוכרת חיים בלעדיך.</p>
+        <p>זה מטורף איך ברגע בן אדם נכנס לך לחיים והופך להיות כל החיים שלך. עברנו כל כך הרבה בארבע וחצי שנים, וזה רק מרגש אותי לחשוב מה עוד נעבור, כמה חוויות טובות ומדהימות. אני כל כך מחכה לחוות איתך הכל.</p>
+        <div class="signature">
+          אני אוהבת אותך הכי הרבה ביקום של היקומים. 🤍<br><br>
+          שלך לתמיד,<br>
+          אשתך בקרוב,<br>
+          <strong>דידי</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const io = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
+    }, {threshold:.08});
+    document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
